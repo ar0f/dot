@@ -21,6 +21,6 @@ alias mv='mv -i'
 alias rm='rm -i'
 
 # Alias System
-alias ASLR_off='sysctl -w kernel.randomize_va_space=0'
-alias ASLR_on='sysctl -w kernel.randomize_va_space=2'
+alias ASLR_off='sudo sysctl -w kernel.randomize_va_space=0'
+alias ASLR_on='sudo sysctl -w kernel.randomize_va_space=2'
 alias SETENGDIR='LANG=C xdg-user-dirs-gtk-update' 
