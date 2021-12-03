@@ -24,6 +24,8 @@ Plugin 'mattn/vim-lsp-icons'
 Plugin 'hrsh7th/vim-vsnip'
 Plugin 'hrsh7th/vim-vsnip-integ'
 
+Plugin 'thedenisnikulin/vim-cyberpunk'
+
 call vundle#end()
 filetype plugin indent on
 
@@ -55,8 +57,12 @@ let mapleader = " "
 "colorscheme nord
 
 " pop-punk Theme
-colorscheme pop-punk
-let g:terminal_ansi_colors = pop_punk#AnsiColors()
+"colorscheme pop-punk
+"let g:terminal_ansi_colors = pop_punk#AnsiColors()
+
+" cyberpunk Theme
+set termguicolors
+colorscheme cyberpunk
 
 " Theme
 set background=dark
