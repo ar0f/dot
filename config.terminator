@@ -1,6 +1,5 @@
 [global_config]
   window_state = maximise
-  borderless = True
   title_hide_sizetext = True
   inactive_color_offset = 1.0
   suppress_multiple_term_dialog = True
@@ -22,10 +21,45 @@
     use_system_font = False
 [layouts]
   [[default]]
-    [[[window0]]]
+    [[[child0]]]
       type = Window
       parent = ""
+      order = 0
+      position = 72:27
+      maximised = True
+      fullscreen = False
+      size = 1724, 1040
+      title = /usr/bin/fish
+      last_active_term = 436e51ab-fb29-4607-99d6-5067b904943d
+      last_active_window = True
     [[[child1]]]
+      type = VPaned
+      parent = child0
+      order = 0
+      position = 518
+      ratio = 0.5004830917874397
+    [[[terminal2]]]
       type = Terminal
-      parent = window0
+      parent = child1
+      order = 0
+      profile = default
+      uuid = 436e51ab-fb29-4607-99d6-5067b904943d
+    [[[child3]]]
+      type = HPaned
+      parent = child1
+      order = 1
+      position = 860
+      ratio = 0.5002908667830134
+    [[[terminal4]]]
+      type = Terminal
+      parent = child3
+      order = 0
+      profile = default
+      uuid = 05362748-d6b8-4142-87fe-dcc585e1ad9f
+    [[[terminal5]]]
+      type = Terminal
+      parent = child3
+      order = 1
+      profile = default
+      uuid = 79dc49d1-10e5-406a-925b-7e39ee842756
 [plugins]
