@@ -10,10 +10,6 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'preservim/nerdtree'
 Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
-
-Plugin 'arcticicestudio/nord-vim'
-Plugin 'bignimbus/pop-punk.vim'
-
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'prabirshrestha/asyncomplete.vim'
@@ -24,7 +20,8 @@ Plugin 'mattn/vim-lsp-icons'
 Plugin 'hrsh7th/vim-vsnip'
 Plugin 'hrsh7th/vim-vsnip-integ'
 
-Plugin 'thedenisnikulin/vim-cyberpunk'
+Plugin 'bignimbus/pop-punk.vim'
+Plugin 'jdkanani/vim-material-theme'
 
 call vundle#end()
 filetype plugin indent on
@@ -35,7 +32,6 @@ set ttimeoutlen=50
 map <silent><C-e> :NERDTreeToggle<CR>
 
 "AirLine
-"let g:airline_theme = 'deus'
 let g:airline_theme = 'pop_punk'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
@@ -43,29 +39,17 @@ let g:airline#extensions#tabline#buffer_idx_mode = 1
 nmap <C-o> <Plug>AirlineSelectPrevTab
 nmap <C-p> <Plug>AirlineSelectNextTab
 
-"keybind
+" Theme
+syntax enable
+colorscheme material-theme
+set background=dark
+
+" Keybind
 inoremap jj <ESC>
 let mapleader = " "
-
-" Dracula Theme
-"packadd! dracula
-"colorscheme dracula
-
-" nord Theme
-"autocmd ColorScheme * highlight Conditional ctermfg=32 guifg=#0087df
-"autocmd ColorScheme * highlight Statement ctermfg=36 guifg=#00af87
-"colorscheme nord
-
-" pop-punk Theme
-"colorscheme pop-punk
-"let g:terminal_ansi_colors = pop_punk#AnsiColors()
-
-" cyberpunk Theme
-set termguicolors
-colorscheme cyberpunk
-
-" Theme
-set background=dark
+nnoremap j gj
+nnoremap k gk
+nmap <Esc><Esc> :nohlsearch<CR><Esc>
 
 " setting
 set fenc=utf-8
@@ -84,23 +68,23 @@ set smartindent
 set showmatch
 set laststatus=2
 set wildmode=list:longest
-
-nnoremap j gj
-nnoremap k gk
-
-syntax enable
-
 set list listchars=tab:\▸\-
 set expandtab
 set tabstop=4
 set shiftwidth=4
-
 set ignorecase
 set smartcase
 set incsearch
 set wrapscan
 set hlsearch
-nmap <Esc><Esc> :nohlsearch<CR><Esc>
+
+" Transparency
+highlight Normal ctermbg=none
+highlight NonText ctermbg=none
+highlight LineNr ctermbg=none
+highlight Folded ctermbg=none
+highlight EndOfBuffer ctermbg=none 
+
 
 " :SyntaxInfo
 function! s:get_syn_id(transparent)
